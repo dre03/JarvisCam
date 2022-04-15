@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Conditional HTML</title>
+</head>
+
+<body>
+    <h1>Berlatih Kondisional</h1>
+
+    <h3>Masukkan nama dan peranmu!</h3>
+    <form action="#" id="formConditional">
+        <input type="text" id="name" placeholder="Isi nama di sini">
+        <input type="text" id="role" placeholder="Isi peran di sini">
+        <input type="submit" value="Mulai Permainan">
+    </form>
+    <h3>Jawaban dari console game: </h3>
+    <div id="jawaban">
+    </div>
+    <p id="jwb"></p>
+    <script>
+        var form = document.getElementById("formConditional")
+        var jawaban = document.getElementById("jawaban")
+        form.addEventListener("submit", function (event) {
+            event.preventDefault()
+            var name = document.getElementById("name").value
+            var role = document.getElementById("role").value
+            // console.log(name) // nama yang disubmit akan tampil di console
+            document.getElementById("jawaban").innerHTML = name;
+            document.getElementById("jwb").innerHTML = role;
+        })
+    </script>
+</body>
+
+</html>
